@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    padding: 50px;
+}
+
+.container .top-d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container .bottom-d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#title {
+    color: var(--VeryDarkMagenta);
+}
+
+#discription {
+    color: #ABA5A9;
+    line-height: 1.6;
+    width: 460px;
+}
+
+.star-box {
+    background-color: var(--LightGrayishMagenta);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.star-box img {
+    margin-right: 5px;
+}
+
+.star-box p {
+    color: var(--VeryDarkMagenta);
+    font-weight: bold;
+}
+
+.star-box .star-icon {
+    margin-right: 10px;
+}
+
+.star-box:first-child {
+    position: relative;
+    right: 30px;
+}
+
+.star-box:first-child .text {
+    padding-right: 30px;
+}
+
+.star-box:last-child {
+    position: relative;
+    left: 50px;
+}
+
+.star-box:last-child .text {
+    padding-right: 50px;
+}
+
+.star-box:nth-child(2) .text {
+    padding-right: 25px;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+}
+
+.review-box {
+    background-color: var(--VeryDarkMagenta);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.review-box:first-child {
+    position: relative;
+    bottom: 20px;
+}
+
+.review-box:last-child {
+    position: relative;
+    top: 20px;
+}
+
+
+
+.review-box img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-box .review-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-box .review-head h4 {
+    margin-bottom: 5px;
+}
+
+.review-box .review-head p {
+    color: var(--SoftPink);
+}
+
+.review-box>p {
+    line-height: 1.8;
+}
+
+.container .top-m,
+.container .bottom-m {
+    display: none;
+}
+
+@media(max-width:800px) {
+    .container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container .top-d,
+    .container .bottom-d {
+        display: none;
+    }
+
+    .container .top-m,
+    .container .bottom-m {
+        display: block;
+        z-index: -1;
+    }
+
+    .container .top-m {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container .bottom-m {
+        position: absolute;
+        bottom: -640px;
+        right: 0;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    #title {
+        margin: 20px 0;
+    }
+
+    #discription {
+        width: 100%;
+    }
+
+    .star-box:first-child {
+        right: 0;
+    }
+
+    .star-box:last-child {
+        left: 0;
+    }
+
+    .stars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .star-box:nth-child(2) .text,
+    .star-box:first-child .text,
+    .star-box:last-child .text {
+        padding-right: 0;
+    }
+
+    .star-box {
+        flex-direction: column;
+        width: 95%;
+    }
+    .reviews{
+        margin-bottom: 50px;
+    }
+
+
+
+}
